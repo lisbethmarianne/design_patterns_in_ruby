@@ -1,3 +1,4 @@
+# Observer (interested in getting the news)
 class Payroll
   def update(changed_employee)
     puts("Cut a new check for #{changed_employee.name}!")
