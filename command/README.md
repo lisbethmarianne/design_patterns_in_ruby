@@ -2,6 +2,8 @@
 
 - instruction to do sth. specific
 - can be executed now, later, or when sth. specific happens
+- instead of saying "Do this!" you are saying "Remember how to do this," and, sometime later, "Do that thing that I told you to remember."
+- commands can be made undoable (`unexecute`)
 
 ![command](https://raw.githubusercontent.com/lisbethmarianne/design_patterns_in_ruby/master/command/command.png)
 
