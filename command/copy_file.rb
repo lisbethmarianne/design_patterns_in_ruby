@@ -8,4 +8,10 @@ class CopyFile < Command
   def execute
     FileUtils.copy(@source, @target)
   end
+
+  def unexecute
+    if File.exists?(@target)
+      File.delete(@target)
+    end
+  end
 end

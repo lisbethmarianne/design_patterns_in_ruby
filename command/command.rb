@@ -7,4 +7,7 @@ class Command
 
   def execute
   end
+
+  def unexecute
+  end
 end
