@@ -1,6 +1,6 @@
 class VirtualAccountProxy
-  def initialize(starting_balance = 0)
-    @starting_balance = starting_balance
+  def initialize(&creation_block)
+    @creation_block = creation_block
   end
 
   def balance
@@ -18,6 +18,8 @@ class VirtualAccountProxy
   private
 
   def subject
-    @subject ||= BankAccount.new(@starting_balance)
+    @subject ||= @creation_block.call
   end
 end
+
+# account = VirtualAccountProxy.new { BankAccount.new(10) }
