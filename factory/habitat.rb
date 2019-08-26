@@ -1,17 +1,16 @@
-class Pond
-  def initialize(number_animals, animal_class, number_plants, plant_class)
-    @animal_class = animal_class
-    @plant_class = plant_class
+class Habitat
+  def initialize(number_animals, number_plants, organism_factory)
+    @organism_factory = organism_factory
 
     @animals = []
     number_animals.times do |i|
-      animal = new_organism(:animal, "Animal#{i}")
+      animal = organism_factory.new_animal("Animal#{i}")
       @animals << animal
     end
 
     @plants = []
     number_plants.times do |i|
-      plant = new_organism(:plant, "Plant#{i}")
+      plant = organism_factory.new_plant("Plant#{i}")
       @plants << plant
     end
   end
