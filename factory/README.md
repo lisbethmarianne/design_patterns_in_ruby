@@ -12,7 +12,7 @@
 - 2 concrete factories, each of which produces it's own set of compatible products
 - uses the Strategy pattern
 
-![abstract_factory](https://raw.githubusercontent.com/lisbethmarianne/design_patterns_in_ruby/master/abstract_factory/abstract_factory.png)
+![abstract_factory](https://raw.githubusercontent.com/lisbethmarianne/design_patterns_in_ruby/master/factory/abstract_factory.png)
 
 ### Ruby-specific implementations
 - in ruby we can take advantage of the fact the classes are just objects
