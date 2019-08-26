@@ -1,15 +1,13 @@
+require 'singleton'
+
 class SimpleLogger
+  include Singleton
+
   attr_accessor :level
 
   ERROR = 1
   WARNING =2
   INFO = 3
-
-  @@instance = SimpleLogger.new
-
-  def self.instance
-    @@instance
-  end
 
   def initialize
     @log = File.open('log.txt', 'w')
