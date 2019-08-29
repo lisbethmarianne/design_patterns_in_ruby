@@ -1,0 +1,5 @@
+backup '/Users/Katrin/code/design_patterns_in_ruby/adapter/'
+backup '/Users/Katrin/code/design_patterns_in_ruby/builder', file_name('*.png') | file_name('*.md')
+backup '/Users/Katrin/code/design_patterns_in_ruby/command', except(file_name('*.md'))
+to '/Users/Katrin/code/design_patterns_in_ruby/backups'
+interval 60
