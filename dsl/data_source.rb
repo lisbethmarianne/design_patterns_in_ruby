@@ -13,9 +13,9 @@ class DataSource
     end
   end
 
-  def backup_file(path, backup_directory)
-    copy_path = File.join(backup_directory, path)
-    FileUtils.mkdir_p(File.dirname(copy_path))
-    FileUtils.cp(path, copy_path)
+  def backup_file(file, backup_directory)
+    backup_file = File.join(backup_directory, file)
+    FileUtils.mkdir_p(File.dirname(backup_file))
+    FileUtils.cp(file, backup_file)
   end
 end

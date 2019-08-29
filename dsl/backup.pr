@@ -1,5 +1,11 @@
-backup '/Users/Katrin/code/design_patterns_in_ruby/adapter/'
-backup '/Users/Katrin/code/design_patterns_in_ruby/builder', file_name('*.png') | file_name('*.md')
-backup '/Users/Katrin/code/design_patterns_in_ruby/command', except(file_name('*.md'))
-to '/Users/Katrin/code/design_patterns_in_ruby/backups'
-interval 60
+Backup.new do |b|
+  b.backup '/Users/Katrin/code/design_patterns_in_ruby/builder', file_name('*.png') | file_name('*.md')
+  b.to '/Users/Katrin/code/design_patterns_in_ruby/backups'
+  b.interval 60
+end
+
+Backup.new do |b|
+  b.backup '/Users/Katrin/code/design_patterns_in_ruby/command', except(file_name('*.md'))
+  b.to '/Users/Katrin/code/design_patterns_in_ruby/backups'
+  b.interval 60
+end
